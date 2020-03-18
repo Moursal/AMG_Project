@@ -1,0 +1,12 @@
+loop_id;module;function_name;source_info;level;time_p;time_s;time_s_min;time_s_avg;time_s_max;
+2409;binary;hypre_CSRMatrixMatvecOutOfPlace._omp_fn.6;;Innermost;4.49;0.01;;;;
+1552;binary;hypre_BoomerAMGCreate2ndS._omp_fn.10;;Innermost;0.56;0;;;;
+1504;binary;hypre_BoomerAMGCreateS._omp_fn.1;;Innermost;0.56;0;;;;
+2405;binary;hypre_CSRMatrixMatvecOutOfPlace._omp_fn.6;;Innermost;0.56;0;;;;
+2017;binary;hypre_ParMatmul_RowSizes._omp_fn.0;;InBetween;0.56;0;;;;
+554;binary;hypre_BoomerAMGBuildMultipass._omp_fn.9;;Innermost;0.56;0;;;;
+1813;binary;hypre_ParCSRComputeL1Norms;;Innermost;0.56;0;;;;
+2646;binary;hypre_UnorderedIntMapCreate._omp_fn.1;;Single;0.56;0;;;;
+2645;binary;hypre_UnorderedIntSetCreate._omp_fn.0;;Single;0.56;0;;;;
+2628;binary;hypre_BinarySearch;;Single;0.56;0;;;;
+76;binary;hypre_BoomerAMGCoarsenPMIS._omp_fn.4;;Single;0.56;0;;;;

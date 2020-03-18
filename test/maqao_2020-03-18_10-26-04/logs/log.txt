@@ -1,0 +1,11 @@
+********************************************************************************
+
+maqao oneview --create-report=one binary=amg run_command=<binary> -P 2 2 1 -n 10 10 10 -printstats mpi_command=mpirun -n 4 
+
+Info: OMP_NUM_THREADS not set, it will be considered as equal to 1
+CMD:  OMP_NUM_THREADS=1   /usr/local/bin/maqao lprof  --xp=/home/moom/Documents/M2_IHPS/AOC/Project/AMG/test/maqao_2020-03-18_10-26-04/lprof_npsu/ --mpi-command="mpirun -n 4"   -- /home/moom/Documents/M2_IHPS/AOC/Project/AMG/test/maqao_2020-03-18_10-26-04/binary -P 2 2 1 -n 10 10 10 -printstats
+In amg, 22 loops, covering 6.27% of total execution time
+      were discarded due to missing debug symbols.
+
+To include them, please rerun with -force-all-loops
+

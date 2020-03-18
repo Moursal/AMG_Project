@@ -1,0 +1,15 @@
+loop_id;module;function_name;source_info;level;time_p;time_s;time_s_min;time_s_avg;time_s_max;
+2409;binary;hypre_CSRMatrixMatvecOutOfPlace._omp_fn.6;;Innermost;1.18;0;;;;
+1472;binary;hypre_BoomerAMGSetupStats;;Innermost;0.59;0;;;;
+2417;binary;hypre_CSRMatrixMatvecOutOfPlace._omp_fn.6;;Innermost;0.59;0;;;;
+1498;binary;hypre_BoomerAMGCreateS._omp_fn.1;;Innermost;0.59;0;;;;
+503;binary;hypre_BoomerAMGBuildMultipass._omp_fn.5;;Outermost;0.59;0;;;;
+2487;binary;hypre_IJMatrixSetValuesOMPParCSR._omp_fn.6;;InBetween;0.59;0;;;;
+2027;binary;hypre_ParMatmul._omp_fn.4;;InBetween;0.59;0;;;;
+1531;binary;hypre_BoomerAMGCreate2ndS._omp_fn.10;;InBetween;0.59;0;;;;
+540;binary;hypre_BoomerAMGBuildMultipass._omp_fn.10;;InBetween;0.59;0;;;;
+79;binary;hypre_BoomerAMGCoarsenPMIS._omp_fn.7;;Innermost;0.59;0;;;;
+2648;binary;hypre_UnorderedIntSetCopyToArray._omp_fn.2;;Single;0.59;0;;;;
+1764;binary;hypre_ParCSRRelax;;Innermost;0.59;0;;;;
+2646;binary;hypre_UnorderedIntMapCreate._omp_fn.1;;Single;0.59;0;;;;
+2433;binary;hypre_CSRMatrixMatvecT;;Outermost;0.59;0;;;;
