@@ -1,3 +1,0 @@
-sampling_engine=2
-hwc_list=
-sampling_period=2000003

@@ -71,7 +71,7 @@ hypre_CSRMatrixMatvecOutOfPlace( HYPRE_Complex    alpha,
 
    HYPRE_Complex     temp, tempx;
 
-   HYPRE_Int         i, j, jj;
+   HYPRE_Int         kk, strip=8,i, j, jj;
 
    HYPRE_Int         m;
 
@@ -112,8 +112,12 @@ hypre_CSRMatrixMatvecOutOfPlace( HYPRE_Complex    alpha,
 #ifdef HYPRE_USING_OPENMP
 #pragma omp parallel for private(i) HYPRE_SMP_SCHEDULE
 #endif
-      for (i = 0; i < num_rows*num_vectors; i++)
-         y_data[i] = beta*b_data[i];
+      
+      for (i = 0; i < num_rows*num_vectors; i+=strip){
+        for (kk = i; kk < i+strip; i++)
+          y_data[kk] = beta*b_data[kk];
+      }
+         
 
 #ifdef HYPRE_PROFILE
       hypre_profile_times[HYPRE_TIMER_ID_MATVEC] += hypre_MPI_Wtime() - time_begin;

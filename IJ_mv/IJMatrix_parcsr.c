@@ -64,21 +64,29 @@ hypre_IJMatrixCreateParCSR(hypre_IJMatrix *matrix)
 
 #ifdef HYPRE_NO_GLOBAL_PARTITION
    row_starts = hypre_CTAlloc(HYPRE_Int,2);
-   if (hypre_IJMatrixGlobalFirstRow(matrix))
-      for (i=0; i < 2; i++)
-	 row_starts[i] = row_partitioning[i]- hypre_IJMatrixGlobalFirstRow(matrix);
-   else 
-      for (i=0; i < 2; i++)
-	 row_starts[i] = row_partitioning[i];
+   if (hypre_IJMatrixGlobalFirstRow(matrix)){
+      //for (i=0; i < 2; i++)
+      row_starts[0] = row_partitioning[0]- hypre_IJMatrixGlobalFirstRow(matrix);
+      row_starts[1] = row_partitioning[1]- hypre_IJMatrixGlobalFirstRow(matrix);   
+   }
+   else {
+      //for (i=0; i < 2; i++)
+      row_starts[0] = row_partitioning[0];
+      row_starts[1] = row_partitioning[1];   
+   }
    if (row_partitioning != col_partitioning)
    {
       col_starts = hypre_CTAlloc(HYPRE_Int,2);
-      if (hypre_IJMatrixGlobalFirstCol(matrix))
-	 for (i=0; i < 2; i++)
-	    col_starts[i] = col_partitioning[i]-hypre_IJMatrixGlobalFirstCol(matrix);
-      else 
-	 for (i=0; i < 2; i++)
-	    col_starts[i] = col_partitioning[i];
+      if (hypre_IJMatrixGlobalFirstCol(matrix)){
+	     //for (i=0; i < 2; i++)
+	     col_starts[0] = col_partitioning[0]-hypre_IJMatrixGlobalFirstCol(matrix);
+        col_starts[1] = col_partitioning[1]-hypre_IJMatrixGlobalFirstCol(matrix);
+      }
+      else{ 
+	     //for (i=0; i < 2; i++)
+	     col_starts[0] = col_partitioning[0];
+        col_starts[1] = col_partitioning[1];
+      }
    }
    else
       col_starts = row_starts;
